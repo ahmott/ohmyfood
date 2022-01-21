@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Projet Openclassrooms P3 Ohmyfood",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ahmott/ohmyfood.git"
@@ -17,6 +14,10 @@
   },
   "homepage": "https://github.com/ahmott/ohmyfood#readme",
   "devDependencies": {
-    "sass": "^1.49.0"
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "node-sass": "node-sass --output-style compressed -o dist/css src/scss",
+    "sass": "sass --watch style.scss style.css"
   }
 }
