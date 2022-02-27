@@ -1,0 +1,9 @@
+@use "../utils/colors.scss";
+
+@mixin shadow {
+    box-shadow: 1px 3px 16px -1px #000000 ;
+}
+
+@mixin shadow2 {
+    box-shadow: 2px 1px 8px -3px colors.$grey0;
+  }

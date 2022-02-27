@@ -1,0 +1,23 @@
+@mixin spin /* check_mark spin */
+  {
+    @keyframes spin {
+      0% {
+        transform: rotate(-250deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+  }
+  /* Drop-down effect */
+  @keyframes appear 
+  {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

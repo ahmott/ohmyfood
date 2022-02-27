@@ -1,0 +1,13 @@
+.location 
+
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+   
+    & .h2
+    {
+        font-family: "Roboto", "sans-serif";
+    }
+}
+

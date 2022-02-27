@@ -1,83 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+@import "./sass/base.scss";
+@import "./sass/layout/header.scss" ;
+@import "./sass/layout/main.scss";
+@import "./sass/layout/location.scss";
+@import "./sass/reservez.scss";
+@import "./sass/help.scss";
+@import "./sass/layout/restaurants.scss";
+@import "./sass/layout/footer.scss";
+@import "./sass/pages/business.scss";
+@import "./sass/utils/loader.scss";
 
-*
-{
-    box-sizing: border-box;
-}
+@import "./sass/utils/linear-gradient.scss";
+@import "./sass/pages/menus.scss";
+@import "./sass/utils/mixins.scss";
 
-body
 
-{
-    margin:0px;
-    font-family: "Roboto", sans-serif;
-}
 
-header
 
-{
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    box-shadow: 1px -2px 15px -5px #000000;
-    padding: 0.6rem;
-}
-
-main
-
-{
-    display: flex;
-    justify-content: center;
-    background-color:rgb(241, 241, 241)
-}
-
-main h2
-
-{
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-
-.location 
-
-{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.reservez
-
-{
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.0rem;
-}
-
-.reservez p
-{
-    font-size:1rem;
-}
-
-.reservez button
-
-{
-    color: white;
-    background-image: linear-gradient(rgba(252,120,220,.8),rgba(147,86,220,.9));
-    font-weight: bold;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 1.8rem;
-    box-shadow: 1px 3px 16px -1px #000000 ;
-    /*border: 1px solid green;*/
-    transition: 300ms;
-}
-
-.reservez button:hover
-
-{
-    transform: scale(1.1);
-    opacity: 0.9;
-}

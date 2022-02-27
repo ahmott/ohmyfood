@@ -1,0 +1,84 @@
+@use "./colors";
+@use "../utils/box-shadow.scss";
+
+
+@mixin bouton
+
+{
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 100ms;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px colors.$grey0;;
+  @include gradient;
+  &:hover {
+    transform: scale(1.10);
+    opacity: 0.9;
+  }
+}
+
+@mixin gradient($opacity: 0.9) 
+{
+  background-image: linear-gradient(
+    to top,
+    rgba(147, 86, 220, $opacity),
+    rgba(255, 121, 218, $opacity)
+  );
+}
+
+@mixin zoom($zoom-level: 1, $transformation: null) {
+  transform: $transformation scale($zoom-level);
+}
+
+@mixin font-awesome($font-weight: 400) 
+
+{
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: $font-weight;
+}
+
+/* hearts */
+
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) 
+
+{
+  @include font-awesome($font-weight);
+  content: "";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: $opacity;
+  transition: all 200ms ease-in-out;
+}
+
+@mixin heart-animated 
+
+{
+  position: relative;
+  background-color: #fff;
+  border-radius: 0 0 1rem 1rem;
+  &::before {
+    @include heart;
+  }
+  &::after {
+    @include heart($opacity: 0, $font-weight: bold, $color: transparent);
+    @include gradient(1);
+  }
+  &:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+}
