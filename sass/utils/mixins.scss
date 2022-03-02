@@ -31,7 +31,7 @@
   );
 }
 
-@mixin zoom($zoom-level: 1, $transformation: null) {
+@mixin zoom($zoom-level: 1.03, $transformation: null) {
   transform: $transformation scale($zoom-level);
 }
 

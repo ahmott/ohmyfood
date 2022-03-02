@@ -75,6 +75,12 @@
                 font-weight: lighter;
             }
             
+            
+           
+        }
+
+        .card-logo 
+        {
             i{
                 font-size: 2rem;
                 position: absolute;
@@ -96,7 +102,6 @@
                 opacity: 1;
                 transform: translateY(-50%) scale(1.2);
             }
-           
         }
       
     }

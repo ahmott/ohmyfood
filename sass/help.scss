@@ -1,3 +1,5 @@
+@use "../sass/utils/mixins.scss";
+@use "../sass/utils/colors.scss";
 .help
 {
     display: flex;
@@ -26,10 +28,27 @@
     @media (max-width: 800px) {
         flex-direction: column;
     }
+
+    :hover
+    {
+        @include mixins.zoom;
+        transition: 200ms all ease-in-out;
+        background-color: #e5d1ff;
+        opacity: 0.9;
+        border-radius: 1rem 1rem 1rem 1rem;
+       & i{
+           color: #9356dc;
+       & #txt{
+           color: #9356dc;
+       }    
+       }
+    } 
 }
 & li {
     position: relative;
-   &::before{
+    cursor: pointer;
+
+    &::before{
        content: counter(listCounter);
        counter-increment: listCounter;
        color: #FFF;
@@ -42,10 +61,15 @@
        position: absolute;
        bottom: 1rem;
        left: -1rem;
+       
+       
     &::after {
         content: "[" counter(listCounter) "] == ["
                      counter(listCounter, upper-roman) "]";
-    }
+
+                    }
+    
+
    }
     background-color: #f7f7f7;
     padding: 1.4rem 2rem 1rem 2rem;
